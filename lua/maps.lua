@@ -13,3 +13,5 @@ keymap.set('n', '<c-a>', 'gg<S-v>G')
 
 keymap.set('n', 'H', '^')
 keymap.set('n', 'L', '$')
+
+keymap.set('n', '<leader>md', '<cmd>MarkdownPreview<cr>')

@@ -46,6 +46,8 @@ return require('packer').startup(function(use)
   use 'tom-anders/telescope-vim-bookmarks.nvim'
   -- Terminal
   use { 'akinsho/toggleterm.nvim', tag = '*' }
+  -- Markdown Preview
+  use({ 'iamcco/markdown-preview.nvim', run = function() vim.fn['mkdp#util#install']() end })
   -- Other
   use 'tpope/vim-surround'
   use 'windwp/nvim-autopairs'
