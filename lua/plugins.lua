@@ -14,6 +14,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- ColorSchemes
   use { 'mcchrish/zenbones.nvim', requires = 'rktjmp/lush.nvim' }
+  use { 'catppuccin/nvim', as = 'catppuccin' }
+  use 'sainnhe/everforest'
   -- LSP
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'

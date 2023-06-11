@@ -1,2 +1,43 @@
---vim.g.zenbones_compat = 1
-vim.cmd('colorscheme zenbones')
+-- require('catppuccin').setup({
+--   flavour = 'mocha',
+--   background = {
+--     light = 'latte',
+--     dark = 'mocha',
+--   },
+--   transparent_background = true, -- enable or disable acryllic background
+--   term_colors = false,
+--   show_end_of_buffers = false,   -- wtf???
+--   no_italic = false,
+--   no_bold = false,
+--   no_underline = false,
+--   styles = {
+--     comments = { 'italic' },
+--     conditionals = {},
+--     loops = {},
+--     functions = {},
+--     keywords = {},
+--     strings = {},
+--     variables = {},
+--     numbers = {},
+--     booleans = {},
+--     properties = {},
+--     types = {},
+--     operators = {},
+--   },
+--   color_overrides = {},
+--   custom_highlights = {},
+--   integrations = {
+--     cmp = true,
+--     nvimtree = true,
+--     treesitter = true,
+--     telescope = true,
+--     mason = true,
+--     lsp_saga = true,
+--     -- notify = true,
+--     -- gitsigns = true,
+--   },
+-- })
+-- vim.cmd('colorscheme catppuccin')
+
+vim.g.everforest_transparent_background = true
+vim.cmd('colorscheme everforest')

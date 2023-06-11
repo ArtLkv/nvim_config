@@ -32,5 +32,36 @@ require('mason-lspconfig').setup_handlers({
       }
     }))
   end,
-  tsserver = function() end,
+  html = function()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    require('lspconfig').html.setup({
+      capabilities = capabilities,
+      cmd = { 'vscode-html-language-server', '--stdio' },
+      filetypes = { 'html' },
+      init_options = {
+        configurationSection = { 'html', 'css', 'javascript' },
+        embeddedLanguages = {
+          css = true,
+          javascript = true,
+        },
+        providedFormatter = true,
+      },
+      settings = {},
+      single_file_support = true,
+    })
+  end,
+  cssls = function()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    require('lspconfig').cssls.setup({
+      capabilities = capabilities,
+      cmd = { 'vscode-css-language-server', '--stdio' },
+      filetypes = { 'css', 'scss', 'less' },
+      settings = {
+        css = { validate = true },
+        less = { validate = true },
+        scss = { validate = true },
+      },
+      single_file_support = true,
+    })
+  end,
 })
